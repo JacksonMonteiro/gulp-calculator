@@ -6,7 +6,7 @@ const {
 
 const rename = require('gulp-rename');
 const minifyJS = require('gulp-uglify');
-const minifyCSS = require('gulp-uglifycss]');
+const minifyCSS = require('gulp-uglifycss');
 
 const sass = require('gulp-sass')(require('sass'));
 sass.compiler = require('node-sass');
@@ -40,7 +40,7 @@ function js() {
 }
 
 function css() {
-    return src('src/css/*.css')
+    return src('src/sass/*.scss')
     .pipe(
         cssImporter()
     )

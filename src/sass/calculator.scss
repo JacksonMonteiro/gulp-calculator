@@ -1,0 +1,58 @@
+@import 'base.css';
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .calculator {
+        background-color: orange;
+        width: 50%;
+        height: 450px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        border: 3px solid #333;
+        border-radius: 16px;
+        padding: 10px;
+
+        .calculator__screen {
+            background-color: #FFF;
+            height: 100px;
+            flex: 1;
+            border-radius: 14px 14px 0 0;
+            color: #000;
+            font-size: 36px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 10px 50px;
+        }
+
+        .calculator__numbers {
+            flex: 2;
+            width: 100%;
+            display: grid;
+            background-color: orange;
+            padding: 10px 0;
+            border-radius: 0 0 14px 14px;
+            grid-template-columns: repeat(3, 1fr);
+
+            .calculator__number {
+                height: 36x;
+                color: #000;
+                font-weight: bold;
+                text-align: center;
+                padding: 12px;
+                line-height: 60px;
+                cursor: pointer;
+                font-size: 24px;
+
+                &:hover {
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
