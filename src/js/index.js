@@ -7,8 +7,6 @@ const equal  = document.querySelector('#equalButton');
 let firstNumber = 0;
 let secondNumber = 0;
 
-alert('Funcionando');
-
 // Got the number when clicked
 for (let i = 0; i < numbers.length; i++) {
     numbers[i].addEventListener('click', () => {

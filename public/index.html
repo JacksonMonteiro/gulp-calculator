@@ -7,27 +7,32 @@
     
     <link rel="stylesheet" href="assets/css/calculator.min.css">
     
-    <title>Gulp Calculator 1.0</title>
+    <title>Calculator (Gulp.js)</title>
 </head>
 <body>
     <div class="calculator">
-        <div class="calculator__screen">
-            0
+        <div class="calculator__output">
+            <div data-previous-number class="previous-number">100 +</div>
+            <div data-current-number class="current-number">100</div>
         </div>
-        <div class="calculator__numbers">
-                <div class="calculator__number">1</div>
-                <div class="calculator__number">2</div>
-                <div class="calculator__number">3</div>
-                <div class="calculator__number">4</div>
-                <div class="calculator__number">5</div>
-                <div class="calculator__number">6</div>
-                <div class="calculator__number">7</div>
-                <div class="calculator__number">8</div>
-                <div class="calculator__number">9</div>
-                <div class="calculator__number">0</div>
-                <div class="calculator__number" id="plusButton">+</div>
-                <div class="calculator__number" id="equalButton">=</div>
-        </div>
+        <button data-allClear class="span-two number-button--gray">AC</button>
+        <button data-delete class="number-button--gray">DEL</button>
+        <button data-operation class="number-button--orange">÷</button>
+        <button data-number class="number-button--dark-gray">1</button>
+        <button data-number class="number-button--dark-gray">2</button>
+        <button data-number class="number-button--dark-gray">3</button>
+        <button data-operation class="number-button--orange">*</button>
+        <button data-number class="number-button--dark-gray">4</button>
+        <button data-number class="number-button--dark-gray">5</button>
+        <button data-number class="number-button--dark-gray">6</button>
+        <button data-operation class="number-button--orange">+</button>
+        <button data-number class="number-button--dark-gray">7</button>
+        <button data-number class="number-button--dark-gray">8</button>
+        <button data-number class="number-button--dark-gray">9</button>
+        <button data-operation class="number-button--orange">-</button>
+        <button data-number class="number-button--dark-gray">.</button>
+        <button data-number class="number-button--dark-gray">0</button>
+        <button data-equals class="number-button--orange span-two">=</button>
     </div>
 
     <script src="assets/js/index.min.js"></script>

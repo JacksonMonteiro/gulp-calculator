@@ -1,57 +1,93 @@
 @import 'base.css';
 
+$black: #000;
+$white: #FFF;
+$orange: orange;
+$light-gray: #ddd;
+$dark-gray: #444;
+
+// Styles Extensions
+%button {
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    outline:none;
+    border-radius: 32px;
+    font-weight: bold;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(to top, #c6ffdd, #fbd786, #f7797d);
 
     .calculator {
-        background-color: orange;
-        width: 50%;
-        height: 450px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        border: 3px solid #333;
-        border-radius: 16px;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(4, 64px);
+        grid-template-rows: minmax(120px, auto) repeat(5, 64px);
+        gap: 10px;
+        background-color: $black;
         padding: 10px;
+        border-radius: 16px;
 
-        .calculator__screen {
-            background-color: #FFF;
-            height: 100px;
-            flex: 1;
-            border-radius: 14px 14px 0 0;
-            color: #000;
-            font-size: 36px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            padding: 10px 50px;
+        .number-button--orange {
+            @extend %button;
+            background-color: orange;
+            color: $black;
+            font-size: 20px;
+            font-weight: bold;
+
+            &:hover {
+                background-color: darkorange;
+            }
         }
 
-        .calculator__numbers {
-            flex: 2;
-            width: 100%;
-            display: grid;
-            background-color: orange;
-            padding: 10px 0;
-            border-radius: 0 0 14px 14px;
-            grid-template-columns: repeat(3, 1fr);
+        .number-button--gray {
+            @extend %button;    
+            background-color: $light-gray;
+            color: $black;
 
-            .calculator__number {
-                height: 36x;
-                color: #000;
-                font-weight: bold;
-                text-align: center;
-                padding: 12px;
-                line-height: 60px;
-                cursor: pointer;
-                font-size: 24px;
+            &:hover {
+                background-color: #bbb;
+            }
+        }
 
-                &:hover {
-                    background-color: white;
-                }
+        .number-button--dark-gray {
+            @extend %button;
+            background-color: $dark-gray;
+            color: $white;
+
+            &:hover {
+                background-color: #222;
+            }
+        }
+
+        .span-two {
+            grid-column: span 2;
+        }
+
+        .calculator__output {
+            grid-column: 1 / -1;
+            background-color: $black;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: space-around;
+            word-wrap: break-word;
+            word-break: break-all;
+
+            .current-number {
+                font-size: 32px;
+                color: $white;
+            }
+
+            .previous-number {
+                font-size: 16px;
+                color: $orange;
             }
         }
     }
